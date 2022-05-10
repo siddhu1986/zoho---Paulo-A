@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 10, 2022 at 03:44 PM
+-- Generation Time: May 10, 2022 at 05:08 PM
 -- Server version: 5.7.23-23
 -- PHP Version: 7.3.32
 
@@ -40,7 +40,7 @@ CREATE TABLE `pa_tokens` (
 --
 
 INSERT INTO `pa_tokens` (`id`, `access_token`, `refresh_token`, `date_updated`) VALUES
-(1, '1000.5cd56761cd52e2eb9fb110719a1f93bf.13f4a80c842ac17cf2204d9fa7828c45', '1000.a894f577917a14e5e0f7e5c6070bdda2.02ba9ff3094bbcb32c471b6ed2eb7c94', '0000-00-00 00:00:00');
+(1, '1000.3438da71e036533433f65ff05d399a35.686b7ad2c0177aaff1acf6838001183a', '1000.81d3c3a4be5941c1b7bda3954783c61a.3b0b9d5d7bf6d6d2f842e80eb73cc502', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
