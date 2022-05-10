@@ -64,6 +64,7 @@ function getRefreshToken()
   /* Save refresh and access tokens to DB */
 	if(isset($out->refresh_token))
 	{
+    $dt = date("Y-m-d H:i:s");
 		$query = "update pa_tokens set access_token='{$out->access_token}', refresh_token='{$out->refresh_token}', date_updated='{$dt}' where id='1'";
 		$pdo->query($query);
 	}
