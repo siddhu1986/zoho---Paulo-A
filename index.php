@@ -28,15 +28,14 @@ catch (\PDOException $e)
 
 
 
-
 /* Constants for creds */
 /* Create SELF CLIENT : https://api-console.zoho.com/ (Add Client) */
-define("CLIENT_ID", "1000.BTR4281I6XEAZW3BQOWILJUQGZAQUY");
-define("CLIENT_SECRET", "ffbf821202cdbc19a6f002836f156123d3505fe81e");
+define("CLIENT_ID", "1000.WBALVL8FBOS44226F2FW3DIK39I0SI");
+define("CLIENT_SECRET", "fdd1060141b2b3b24050061767e481d75fe0838dfc");
 
 
 /* Go to Self Client > Generate Code > [Scope: ZohoCRM.modules.leads.CREATE] > */
-define("CODE", "1000.72b7bbfc326d5fcd4dc3066d01576734.37234d390c69862bee5f520b9a9daaef");
+define("CODE", "1000.4be9804729ae2f26d9976367ace1c8e3.fb9c2ab4a6841385e57b53e1cbd243a9");
 
 
 /* Function to getRefreshTokem from the above code (One-time) */
@@ -74,6 +73,7 @@ function getRefreshToken()
 
 /* Run First Time to update Refresh Token and Access Token in DB */
 //getRefreshToken();
+//die();
 
 
 /* Get Access Token from Refresh Token */
@@ -165,7 +165,9 @@ function addLead($lead,$getToken)
 	print_r($result);
 }
 
-$lead = array("last_name"=>"Smith","email"=>"abc@baa.com");
+//$lead = array("last_name"=>"Smith","email"=>"abc@baa.com");
+extract($_REQUEST);
+$lead = array("last_name"=>$last_name,"email"=>$email);
 addLead($lead,false);
 
 
